@@ -14,18 +14,17 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import androidx.fragment.app.FragmentActivity;
-import androidx.appcompat.app.ActionBarActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.fragment.app.FragmentActivity;
+
 import com.beetle.bauhinia.api.IMHttpAPI;
 import com.beetle.bauhinia.api.body.PostDeviceToken;
-import com.beetle.bauhinia.db.GroupMessageHandler;
-import com.beetle.bauhinia.db.PeerMessageHandler;
+import com.beetle.bauhinia.handler.GroupMessageHandler;
+import com.beetle.bauhinia.handler.PeerMessageHandler;
 import com.beetle.im.IMService;
 
 import org.apache.http.Header;
@@ -138,7 +137,8 @@ public class LoginActivity extends FragmentActivity implements View.OnClickListe
     private String login(long uid) {
         //调用app自身的登陆接口获取im服务必须的access token,之后可将token保存在本地供下次直接登录IM服务
         //sandbox地址: "http://sandbox.demo.gobelieve.io"
-        String URL = "http://demo.gobelieve.io";
+//        String URL = "http://demo.gobelieve.io";
+        String URL = "http://10.0.0.252:6666";
         String uri = String.format("%s/auth/token", URL);
         try {
             HttpClient getClient = new DefaultHttpClient();

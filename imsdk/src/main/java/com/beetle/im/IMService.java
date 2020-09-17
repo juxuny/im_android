@@ -900,7 +900,8 @@ public class IMService {
             @Override
             protected void onPostExecute(String result) {
                 if (result.length() > 0) {
-                    IMService.this.hostIP = result;
+//                    IMService.this.hostIP = result;
+                    IMService.this.hostIP = "10.0.0.252";
                     IMService.this.timestamp = now();
                 }
             }
