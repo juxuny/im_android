@@ -51,7 +51,7 @@ public class MessageImageView extends MessageContentView {
                     .into(imageView);
         } else {
             Picasso.get()
-                    .load(url + "@256w_256h_0c")
+                    .load(url)
                     .placeholder(R.drawable.image_download_fail)
                     .into(imageView);
         }

@@ -218,8 +218,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private String login(long uid) {
         //调用app自身的登陆接口获取im服务必须的access token,之后可将token保存在本地供下次直接登录IM服务
 //        String URL = "http://demo.gobelieve.io";
-        String URL = "http://10.0.0.252:6666";
-        
+//        String URL = "http://10.0.0.252:6666";
+        String URL = "http://10.0.0.252:7777";
         String uri = String.format("%s/auth/token", URL);
         try {
             HttpClient getClient = new DefaultHttpClient();

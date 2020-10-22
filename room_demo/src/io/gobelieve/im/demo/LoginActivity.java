@@ -14,6 +14,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -138,6 +139,7 @@ public class LoginActivity extends FragmentActivity implements View.OnClickListe
         //调用app自身的登陆接口获取im服务必须的access token,之后可将token保存在本地供下次直接登录IM服务
         //sandbox地址: "http://sandbox.demo.gobelieve.io"
 //        String URL = "http://demo.gobelieve.io";
+//        String URL = "http://192.168.101.2:7777";
         String URL = "http://10.0.0.252:6666";
         String uri = String.format("%s/auth/token", URL);
         try {

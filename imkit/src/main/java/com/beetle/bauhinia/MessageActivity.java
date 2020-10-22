@@ -600,6 +600,8 @@ public class MessageActivity extends MessageAudioActivity implements
                                 MessageActivity.this.startActivity(intent);
                             }
                         });
+                    } else if (msgType == MessageContent.MessageType.MESSAGE_IMAGE) {
+                        Log.i(TAG, "received an image");
                     }
 
                     if (rowView.getReplyButton() != null) {

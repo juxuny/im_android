@@ -55,6 +55,7 @@ public class IMService {
             PORT = 24430;
         } else {
             PORT = 23000;
+//            PORT = 23001;
         }
     }
 
@@ -901,6 +902,8 @@ public class IMService {
             protected void onPostExecute(String result) {
                 if (result.length() > 0) {
 //                    IMService.this.hostIP = result;
+//                    IMService.this.hostIP = "10.0.0.252";
+//                    IMService.this.hostIP = "192.168.101.2";
                     IMService.this.hostIP = "10.0.0.252";
                     IMService.this.timestamp = now();
                 }
